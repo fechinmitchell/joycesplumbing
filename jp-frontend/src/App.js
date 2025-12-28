@@ -71,7 +71,7 @@ const Hero = () => (
         <span className="hero-title-accent">Plumbing Services</span>
       </h1>
       <p className="hero-subtitle">
-        From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job — big or small.
+        From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Connemara, Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job — big or small.
       </p>
       <div className="hero-buttons">
         <a href="tel:+353851234567" className="btn-primary">
