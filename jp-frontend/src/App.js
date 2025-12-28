@@ -31,6 +31,7 @@ const Navigation = () => {
           <span>Joyce's Plumbing</span>
         </div>
         <div className={`nav-links ${isMobileMenuOpen ? 'nav-links-open' : ''}`}>
+          <button onClick={() => scrollToSection('about')}>About</button>
           <button onClick={() => scrollToSection('services')}>Services</button>
           <button onClick={() => scrollToSection('work')}>Our Work</button>
           <button onClick={() => scrollToSection('contact')} className="nav-cta">Get in Touch</button>
@@ -58,11 +59,11 @@ const Hero = () => (
         <span className="hero-title-accent">Plumbing Help</span>
       </h1>
       <p className="hero-subtitle">
-        Based in Oughterard, serving Connemara and Galway. No job too small, no call too late. I treat every home like my own.
+        From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job – big or small.
       </p>
       <div className="hero-buttons">
         <a href="tel:+353851234567" className="btn-primary">
-          <Phone size={20} /> Give Me a Call
+          <Phone size={20} /> Give Us a Call
         </a>
         <button className="btn-secondary" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
           View Services <ArrowRight size={20} />
@@ -83,27 +84,61 @@ const Hero = () => (
         </div>
       </div>
     </div>
-    <div className="scroll-indicator" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+    <div className="scroll-indicator" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
       <ChevronDown className="scroll-icon" />
     </div>
   </section>
 );
 
+const About = () => (
+  <section id="about" className="about">
+    <div className="section-container">
+      <div className="about-content-full">
+        <span className="section-tag">Why Choose Us</span>
+        <h2 className="section-title">Reliable Plumbing & Heating Solutions for Homes and Businesses</h2>
+        <p className="about-text">
+          Looking for a Galway plumber you can trust? At Joyce's Plumbing, we deliver expert plumbing services, comprehensive bathroom renovations, and boiler servicing, ensuring quality results every time.
+        </p>
+        <p className="about-text">
+          With over 15 years of experience, we provide a full range of domestic and commercial plumbing solutions, serving Oughterard, Connemara, Galway City and surrounding areas.
+        </p>
+        <p className="about-text">
+          Whether you need an emergency plumber, professional heating upgrades, or a complete bathroom remodel, our locally trusted team is here to help.
+        </p>
+        <div className="about-stats">
+          <div className="about-stat">
+            <span className="about-stat-number">15+</span>
+            <span className="about-stat-label">Years Experience</span>
+          </div>
+          <div className="about-stat">
+            <span className="about-stat-number">Local</span>
+            <span className="about-stat-label">Galway Based</span>
+          </div>
+          <div className="about-stat">
+            <span className="about-stat-number">1000+</span>
+            <span className="about-stat-label">Happy Customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const services = [
-  { icon: Wrench, title: 'Emergency Repairs', description: "Burst pipe at midnight? No problem. I'll get to you as fast as I can.", features: ['Available Evenings & Weekends', 'Quick Response', 'Honest Pricing'] },
+  { icon: Wrench, title: 'Emergency Repairs', description: "Burst pipe at midnight? No problem. We'll get to you as fast as we can.", features: ['Available Evenings & Weekends', 'Quick Response', 'Honest Pricing'] },
   { icon: ShowerHead, title: 'Bathrooms', description: "From fixing a leaky shower to fitting a whole new bathroom.", features: ['Full Installations', 'Repairs & Upgrades', 'Tidy Workmanship'] },
   { icon: Thermometer, title: 'Heating & Boilers', description: "Keep your home cosy through those Connemara winters.", features: ['Boiler Servicing', 'Repairs', 'New Installations'] },
-  { icon: PipetteIcon, title: 'Drains & Blockages', description: "Blocked drain? I'll get things flowing again.", features: ['Drain Clearing', 'CCTV Surveys', 'Prevention Advice'] },
-  { icon: Droplets, title: 'Leaks & Taps', description: "That annoying drip keeping you up? Let me sort it.", features: ['Tap Repairs', 'Leak Detection', 'Pipe Repairs'] },
-  { icon: Clock, title: 'General Plumbing', description: "Whatever the job, big or small, give me a call.", features: ['Dishwasher Installs', 'Washing Machines', 'General Repairs'] }
+  { icon: PipetteIcon, title: 'Drains & Blockages', description: "Blocked drain? We'll get things flowing again.", features: ['Drain Clearing', 'CCTV Surveys', 'Prevention Advice'] },
+  { icon: Droplets, title: 'Leaks & Taps', description: "That annoying drip keeping you up? Let us sort it.", features: ['Tap Repairs', 'Leak Detection', 'Pipe Repairs'] },
+  { icon: Clock, title: 'General Plumbing', description: "Whatever the job, big or small, give us a call.", features: ['Dishwasher Installs', 'Washing Machines', 'General Repairs'] }
 ];
 
 const Services = () => (
   <section id="services" className="services">
     <div className="section-container">
       <div className="section-header">
-        <span className="section-tag">How I Can Help</span>
-        <h2 className="section-title">Services</h2>
+        <span className="section-tag">How We Can Help</span>
+        <h2 className="section-title">Our Services</h2>
         <p className="section-subtitle">No job too small – from a dripping tap to a full bathroom installation</p>
       </div>
       <div className="services-grid">
@@ -176,7 +211,7 @@ const Contact = () => {
         setError(data.error || 'Something went wrong.');
       }
     } catch (err) {
-      setError('Unable to send message. Please give me a call instead!');
+      setError('Unable to send message. Please give us a call instead!');
     }
     setIsSubmitting(false);
   };
@@ -189,16 +224,16 @@ const Contact = () => {
             <span className="section-tag">Let's Chat</span>
             <h2 className="section-title">Get in Touch</h2>
             <p className="contact-description">
-              Give me a call or drop me a message – no obligation, just friendly advice.
+              Give us a call or drop us a message – no obligation, just friendly advice.
             </p>
             <div className="contact-details">
               <a href="tel:+353851234567" className="contact-item">
                 <div className="contact-icon"><Phone size={24} /></div>
                 <div><strong>Phone</strong><span>085 123 4567</span></div>
               </a>
-              <a href="mailto:pat@joycesplumbing.ie" className="contact-item">
+              <a href="mailto:info@joycesplumbing.ie" className="contact-item">
                 <div className="contact-icon"><Mail size={24} /></div>
-                <div><strong>Email</strong><span>pat@joycesplumbing.ie</span></div>
+                <div><strong>Email</strong><span>info@joycesplumbing.ie</span></div>
               </a>
               <div className="contact-item">
                 <div className="contact-icon"><MapPin size={24} /></div>
@@ -215,7 +250,7 @@ const Contact = () => {
               <div className="form-success">
                 <CheckCircle size={48} />
                 <h3>Thanks a Million!</h3>
-                <p>I'll get back to you as soon as I can.</p>
+                <p>We'll get back to you as soon as we can.</p>
                 <button onClick={() => setSubmitted(false)} className="btn-primary">Send Another Message</button>
               </div>
             ) : (
@@ -236,8 +271,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="message">How Can I Help?</label>
-                  <textarea id="message" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} required rows={4} placeholder="Tell me a bit about what you need..." />
+                  <label htmlFor="message">How Can We Help?</label>
+                  <textarea id="message" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} required rows={4} placeholder="Tell us a bit about what you need..." />
                 </div>
                 <button type="submit" className="btn-primary btn-full" disabled={isSubmitting}>
                   {isSubmitting ? 'Sending...' : 'Send Message'} <ArrowRight size={20} />
@@ -268,6 +303,7 @@ function App() {
     <div className="app">
       <Navigation />
       <Hero />
+      <About />
       <Services />
       <Work />
       <Contact />

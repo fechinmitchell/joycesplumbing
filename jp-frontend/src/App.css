@@ -202,3 +202,10 @@ section { padding: 100px 0; }
 .footer-simple .nav-logo { justify-content: center; margin-bottom: 12px; }
 .footer-simple p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-bottom: 8px; }
 .footer-copy { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+/* About Full Width */
+.about-content-full { max-width: 800px; margin: 0 auto; text-align: center; }
+.about-content-full .section-tag { margin-bottom: 16px; }
+.about-content-full .section-title { margin-bottom: 32px; }
+.about-content-full .about-text { text-align: left; }
+.about-content-full .about-stats { justify-content: center; margin-top: 40px; }
