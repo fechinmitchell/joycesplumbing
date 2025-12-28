@@ -100,7 +100,7 @@ const About = () => (
           Looking for a Galway plumber you can trust? At Joyce's Plumbing, we deliver expert plumbing services, comprehensive bathroom renovations, and boiler servicing, ensuring quality results every time.
         </p>
         <p className="about-text">
-          With over 15 years of experience, we provide a full range of domestic and commercial plumbing solutions, serving Oughterard, Connemara, Galway City and surrounding areas.
+          With many years of experience, we provide a full range of domestic and commercial plumbing solutions, serving Oughterard, Connemara, Galway City and surrounding areas.
         </p>
         <p className="about-text">
           Whether you need an emergency plumber, professional heating upgrades, or a complete bathroom remodel, our locally trusted team is here to help.
@@ -291,7 +291,7 @@ const Footer = () => (
     <div className="section-container">
       <div className="footer-simple">
         <div className="nav-logo"><Droplets className="logo-icon" /><span>Joyce's Plumbing</span></div>
-        <p>Your friendly local plumber in Oughterard, serving Connemara and Galway.</p>
+        <p>Your local plumber in Oughterard, serving Connemara and Galway.</p>
         <p className="footer-copy">&copy; {new Date().getFullYear()} Joyce's Plumbing · Made with <Heart size={14} className="heart-icon" /> in Oughterard</p>
       </div>
     </div>
