@@ -54,7 +54,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* Hero */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 24px 80px; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: var(--gradient-warm); }
+.hero-bg { position: absolute; inset: 0; background: url('./assets/bg-3.jpg') center center / cover no-repeat; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: rgba(30, 58, 95, 0.85); }
 .hero-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.2), transparent), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(37, 99, 235, 0.15), transparent); }
 .hero-content { position: relative; max-width: 700px; text-align: center; color: white; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50px; font-size: 0.9rem; font-weight: 500; margin-bottom: 28px; backdrop-filter: blur(10px); }
@@ -94,6 +95,13 @@ section { padding: 100px 0; }
 .about-stat-number { display: block; font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
 .about-stat-label { font-size: 0.85rem; color: var(--text-light); }
 
+/* About Full Width */
+.about-content-full { max-width: 800px; margin: 0 auto; text-align: center; }
+.about-content-full .section-tag { margin-bottom: 16px; }
+.about-content-full .section-title { margin-bottom: 32px; }
+.about-content-full .about-text { text-align: left; }
+.about-content-full .about-stats { justify-content: center; margin-top: 40px; }
+
 /* Services */
 .services { background: var(--bg); }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
@@ -105,6 +113,13 @@ section { padding: 100px 0; }
 .service-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .service-features li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text); }
 .service-features svg { color: var(--accent); flex-shrink: 0; }
+
+/* Work Gallery */
+.work { background: var(--bg-alt); }
+.work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.work-card { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/2; }
+.work-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.work-card:hover img { transform: scale(1.05); }
 
 /* Reviews */
 .reviews { background: var(--bg-alt); }
@@ -155,6 +170,12 @@ section { padding: 100px 0; }
 .footer-bottom p { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
 .heart-icon { color: #ef4444; }
 
+/* Simpler Footer */
+.footer-simple { text-align: center; }
+.footer-simple .nav-logo { justify-content: center; margin-bottom: 12px; }
+.footer-simple p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-bottom: 8px; }
+.footer-copy { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
 /* Responsive */
 @media (max-width: 1024px) {
   .about-wrapper { grid-template-columns: 1fr; gap: 40px; }
@@ -189,23 +210,3 @@ section { padding: 100px 0; }
   .contact-form-wrapper { padding: 24px; }
   .trust-item { font-size: 0.85rem; }
 }
-
-/* Work Gallery */
-.work { background: var(--bg-alt); }
-.work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.work-card { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/2; }
-.work-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
-.work-card:hover img { transform: scale(1.05); }
-
-/* Simpler Footer */
-.footer-simple { text-align: center; }
-.footer-simple .nav-logo { justify-content: center; margin-bottom: 12px; }
-.footer-simple p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-bottom: 8px; }
-.footer-copy { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
-
-/* About Full Width */
-.about-content-full { max-width: 800px; margin: 0 auto; text-align: center; }
-.about-content-full .section-tag { margin-bottom: 16px; }
-.about-content-full .section-title { margin-bottom: 32px; }
-.about-content-full .about-text { text-align: left; }
-.about-content-full .about-stats { justify-content: center; margin-top: 40px; }
