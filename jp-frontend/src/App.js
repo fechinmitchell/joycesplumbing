@@ -18,6 +18,18 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
@@ -36,7 +48,11 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('work')}>Our Work</button>
           <button onClick={() => scrollToSection('contact')} className="nav-cta">Get in Touch</button>
         </div>
-        <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button 
+          className="mobile-menu-btn" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+        >
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -50,16 +66,12 @@ const Hero = () => (
       <div className="hero-gradient"></div>
     </div>
     <div className="hero-content">
-      {/* <div className="hero-badge">
-        <Heart size={16} />
-        <span>Your Local Connemara Plumber</span>
-      </div> */}
       <h1 className="hero-title">
         Trusted<br />
         <span className="hero-title-accent">Plumbing Services</span>
       </h1>
       <p className="hero-subtitle">
-        From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job – big or small.
+        From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job — big or small.
       </p>
       <div className="hero-buttons">
         <a href="tel:+353851234567" className="btn-primary">
@@ -139,7 +151,7 @@ const Services = () => (
       <div className="section-header">
         <span className="section-tag">How We Can Help</span>
         <h2 className="section-title">Our Services</h2>
-        <p className="section-subtitle">No job too small – from a dripping tap to a full bathroom installation</p>
+        <p className="section-subtitle">No job too small — from a dripping tap to a full bathroom installation</p>
       </div>
       <div className="services-grid">
         {services.map((service, index) => (
@@ -179,7 +191,7 @@ const Work = () => (
       <div className="work-grid">
         {workImages.map((image, index) => (
           <div key={index} className="work-card">
-            <img src={image.src} alt={image.alt} />
+            <img src={image.src} alt={image.alt} loading="lazy" />
           </div>
         ))}
       </div>
@@ -224,7 +236,7 @@ const Contact = () => {
             <span className="section-tag">Let's Chat</span>
             <h2 className="section-title">Get in Touch</h2>
             <p className="contact-description">
-              Give us a call or drop us a message – no obligation, just friendly advice.
+              Give us a call or drop us a message — no obligation, just friendly advice.
             </p>
             <div className="contact-details">
               <a href="tel:+353851234567" className="contact-item">
@@ -258,21 +270,51 @@ const Contact = () => {
                 {error && <div className="form-error">{error}</div>}
                 <div className="form-group">
                   <label htmlFor="name">Your Name</label>
-                  <input type="text" id="name" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} required placeholder="Mary O'Brien" />
+                  <input 
+                    type="text" 
+                    id="name" 
+                    value={formData.name} 
+                    onChange={(e) => setFormData({...formData, name: e.target.value})} 
+                    required 
+                    placeholder="Mary O'Brien"
+                    autoComplete="name"
+                  />
                 </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} required placeholder="mary@example.com" />
+                    <input 
+                      type="email" 
+                      id="email" 
+                      value={formData.email} 
+                      onChange={(e) => setFormData({...formData, email: e.target.value})} 
+                      required 
+                      placeholder="mary@example.com"
+                      autoComplete="email"
+                    />
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">Phone</label>
-                    <input type="tel" id="phone" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} placeholder="085 123 4567" />
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      value={formData.phone} 
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})} 
+                      placeholder="085 123 4567"
+                      autoComplete="tel"
+                    />
                   </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="message">How Can We Help?</label>
-                  <textarea id="message" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} required rows={4} placeholder="Tell us a bit about what you need..." />
+                  <textarea 
+                    id="message" 
+                    value={formData.message} 
+                    onChange={(e) => setFormData({...formData, message: e.target.value})} 
+                    required 
+                    rows={4} 
+                    placeholder="Tell us a bit about what you need..." 
+                  />
                 </div>
                 <button type="submit" className="btn-primary btn-full" disabled={isSubmitting}>
                   {isSubmitting ? 'Sending...' : 'Send Message'} <ArrowRight size={20} />
@@ -292,7 +334,7 @@ const Footer = () => (
       <div className="footer-simple">
         <div className="nav-logo"><Droplets className="logo-icon" /><span>Joyce's Plumbing</span></div>
         <p>Your local plumber in Oughterard, serving Connemara and Galway.</p>
-        <p className="footer-copy">&copy; {new Date().getFullYear()} Joyce's Plumbing · Made with <Heart size={14} className="heart-icon" /> in Oughterard</p>
+        <p className="footer-copy">&copy; {new Date().getFullYear()} Joyce's Plumbing</p>
       </div>
     </div>
   </footer>
