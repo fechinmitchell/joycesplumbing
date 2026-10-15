@@ -136,12 +136,12 @@ const About = () => (
 );
 
 const services = [
-  { icon: Gauge, title: 'Pumps & Water Pressure', description: "Weak shower or a pump giving trouble? We'll get your water flowing properly again.", features: ['Pump Repairs & Replacement', 'Low Pressure Sorted', 'Outdoor Taps Fitted'] },
-  { icon: ShowerHead, title: 'Bathrooms', description: "Whether it's a dripping shower or a full bathroom refit, we'll do a proper job.", features: ['Full Bathroom Refits', 'Showers & Electric Showers', 'Neat & Tidy Finish'] },
+  { icon: Wrench, title: 'General Plumbing', description: "If it involves water, give us a ring. No job is too small.", features: ['Dishwashers & Washing Machines', 'Toilets & Cisterns', 'Hot Water Cylinders'] },
   { icon: Thermometer, title: 'Heating & Boilers', description: "Keep the house warm through the long Connemara winters.", features: ['Annual Boiler Service', 'Oil Boiler Repairs', 'Radiators & Controls'] },
+  { icon: ShowerHead, title: 'Bathrooms', description: "Whether it's a dripping shower or a full bathroom refit, we'll do a proper job.", features: ['Full Bathroom Refits', 'Showers & Electric Showers', 'Neat & Tidy Finish'] },
+  { icon: Gauge, title: 'Pumps & Water Pressure', description: "Weak shower or a pump giving trouble? We'll get your water flowing properly again.", features: ['Pump Repairs & Replacement', 'Low Pressure Sorted', 'Outdoor Taps Fitted'] },
   { icon: PipetteIcon, title: 'Drains & Blockages', description: "Sink, toilet or drain that won't clear? We'll have it running freely again.", features: ['Blocked Sinks & Toilets', 'Drain Unblocking', 'Waste Pipe Repairs'] },
-  { icon: Droplets, title: 'Leaks & Taps', description: "A drip under the sink or a tap that won't stop? We'll find it and fix it.", features: ['Tap Repairs & Replacement', 'Leak Finding', 'Pipe Repairs'] },
-  { icon: Wrench, title: 'General Plumbing', description: "If it involves water, give us a ring. No job is too small.", features: ['Dishwashers & Washing Machines', 'Toilets & Cisterns', 'Hot Water Cylinders'] }
+  { icon: Droplets, title: 'Leaks & Taps', description: "A drip under the sink or a tap that won't stop? We'll find it and fix it.", features: ['Tap Repairs & Replacement', 'Leak Finding', 'Pipe Repairs'] }
 ];
 
 const Services = () => (
