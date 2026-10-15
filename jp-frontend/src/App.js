@@ -209,7 +209,7 @@ const Contact = () => (
             </div>
             <div className="contact-item">
               <div className="contact-icon"><Clock size={24} /></div>
-              <div><strong>Hours</strong><span>7am to 9pm</span></div>
+              <div><strong>Hours</strong><span>7am to 7pm</span></div>
             </div>
           </div>
         </div>
