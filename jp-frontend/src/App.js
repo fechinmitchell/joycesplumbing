@@ -116,20 +116,6 @@ const About = () => (
         <p className="about-text">
           Whether you need a leak fixed, your boiler serviced or a new bathroom put in, we're a local team you can rely on. Just give us a ring.
         </p>
-        <div className="about-stats">
-          <div className="about-stat">
-            <span className="about-stat-number">15+</span>
-            <span className="about-stat-label">Years Experience</span>
-          </div>
-          <div className="about-stat">
-            <span className="about-stat-number">Local</span>
-            <span className="about-stat-label">Galway Based</span>
-          </div>
-          <div className="about-stat">
-            <span className="about-stat-number">1000+</span>
-            <span className="about-stat-label">Happy Customers</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
