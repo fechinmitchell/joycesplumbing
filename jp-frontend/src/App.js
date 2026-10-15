@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Phone, Mail, MapPin, Droplets, Wrench, ShowerHead, 
   Thermometer, PipetteIcon, Clock, ChevronDown,
-  Menu, X, CheckCircle, ArrowRight, Heart
+  Menu, X, CheckCircle, ArrowRight
 } from 'lucide-react';
 import './App.css';
 
