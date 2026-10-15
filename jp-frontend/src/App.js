@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Phone, Mail, MapPin, Droplets, Wrench, ShowerHead, 
-  Thermometer, PipetteIcon, Clock, ChevronDown,
+  Thermometer, PipetteIcon, Clock, ChevronDown, Gauge,
   Menu, X, CheckCircle, ArrowRight
 } from 'lucide-react';
 import './App.css';
@@ -70,7 +70,7 @@ const Hero = () => (
         <span className="hero-title-accent">Plumbing Services</span>
       </h1>
       <p className="hero-subtitle">
-        From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Connemara, Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job — big or small.
+        From leaks and dripping taps to boiler servicing and full bathroom refits, we do a proper job at a fair price. Serving Oughterard, Connemara, Galway City and the surrounding areas, no job is too big or too small.
       </p>
       <div className="hero-buttons">
         <a href="tel:+353870989898" className="btn-primary">
@@ -108,13 +108,13 @@ const About = () => (
         <span className="section-tag">Why Choose Us</span>
         <h2 className="section-title">Reliable Plumbing & Heating Solutions for Homes and Businesses</h2>
         <p className="about-text">
-          Looking for a Galway plumber you can trust? At Joyce's Plumbing, we deliver expert plumbing services, comprehensive bathroom renovations, and boiler servicing, ensuring quality results every time.
+          Looking for a plumber in Galway you can trust? At Joyce's Plumbing we look after everything from plumbing repairs and boiler servicing to full bathroom refits, and we take pride in doing every job right.
         </p>
         <p className="about-text">
-          With many years of experience, we provide a full range of domestic and commercial plumbing solutions, serving Oughterard, Connemara, Galway City and surrounding areas.
+          With over 15 years in the trade, we work on homes and businesses across Oughterard, Connemara, Galway City and the surrounding areas.
         </p>
         <p className="about-text">
-          Whether you need an emergency plumber, professional heating upgrades, or a complete bathroom remodel, our locally trusted team is here to help.
+          Whether you need a leak fixed, your boiler serviced or a new bathroom put in, we're a local team you can rely on. Just give us a ring.
         </p>
         <div className="about-stats">
           <div className="about-stat">
@@ -136,12 +136,12 @@ const About = () => (
 );
 
 const services = [
-  { icon: Wrench, title: 'Emergency Repairs', description: "Burst pipe at midnight? No problem. We'll get to you as fast as we can.", features: ['Available Evenings & Weekends', 'Quick Response', 'Honest Pricing'] },
-  { icon: ShowerHead, title: 'Bathrooms', description: "From fixing a leaky shower to fitting a whole new bathroom.", features: ['Full Installations', 'Repairs & Upgrades', 'Tidy Workmanship'] },
-  { icon: Thermometer, title: 'Heating & Boilers', description: "Keep your home cosy through those Connemara winters.", features: ['Boiler Servicing', 'Repairs', 'New Installations'] },
-  { icon: PipetteIcon, title: 'Drains & Blockages', description: "Blocked drain? We'll get things flowing again.", features: ['Drain Clearing', 'CCTV Surveys', 'Prevention Advice'] },
-  { icon: Droplets, title: 'Leaks & Taps', description: "That annoying drip keeping you up? Let us sort it.", features: ['Tap Repairs', 'Leak Detection', 'Pipe Repairs'] },
-  { icon: Clock, title: 'General Plumbing', description: "Whatever the job, big or small, give us a call.", features: ['Dishwasher Installs', 'Washing Machines', 'General Repairs'] }
+  { icon: Gauge, title: 'Pumps & Water Pressure', description: "Weak shower or a pump giving trouble? We'll get your water flowing properly again.", features: ['Pump Repairs & Replacement', 'Low Pressure Sorted', 'Outdoor Taps Fitted'] },
+  { icon: ShowerHead, title: 'Bathrooms', description: "Whether it's a dripping shower or a full bathroom refit, we'll do a proper job.", features: ['Full Bathroom Refits', 'Showers & Electric Showers', 'Neat & Tidy Finish'] },
+  { icon: Thermometer, title: 'Heating & Boilers', description: "Keep the house warm through the long Connemara winters.", features: ['Annual Boiler Service', 'Oil Boiler Repairs', 'Radiators & Controls'] },
+  { icon: PipetteIcon, title: 'Drains & Blockages', description: "Sink, toilet or drain that won't clear? We'll have it running freely again.", features: ['Blocked Sinks & Toilets', 'Drain Unblocking', 'Waste Pipe Repairs'] },
+  { icon: Droplets, title: 'Leaks & Taps', description: "A drip under the sink or a tap that won't stop? We'll find it and fix it.", features: ['Tap Repairs & Replacement', 'Leak Finding', 'Pipe Repairs'] },
+  { icon: Wrench, title: 'General Plumbing', description: "If it involves water, give us a ring. No job is too small.", features: ['Dishwashers & Washing Machines', 'Toilets & Cisterns', 'Hot Water Cylinders'] }
 ];
 
 const Services = () => (
@@ -150,7 +150,7 @@ const Services = () => (
       <div className="section-header">
         <span className="section-tag">How We Can Help</span>
         <h2 className="section-title">Our Services</h2>
-        <p className="section-subtitle">No job too small — from a dripping tap to a full bathroom installation</p>
+        <p className="section-subtitle">No job too small, from a dripping tap to a full bathroom refit</p>
       </div>
       <div className="services-grid">
         {services.map((service, index) => (
@@ -206,7 +206,7 @@ const Contact = () => (
           <span className="section-tag">Let's Chat</span>
           <h2 className="section-title">Get in Touch</h2>
           <p className="contact-description">
-            Give us a call or drop us an email — no obligation, just friendly advice.
+            Give us a call or drop us an email. No obligation, just friendly advice.
           </p>
           <div className="contact-details">
             <a href="tel:+353870989898" className="contact-item">
@@ -223,7 +223,7 @@ const Contact = () => (
             </div>
             <div className="contact-item">
               <div className="contact-icon"><Clock size={24} /></div>
-              <div><strong>Hours</strong><span>7am - 7pm</span></div>
+              <div><strong>Hours</strong><span>7am to 9pm</span></div>
             </div>
           </div>
         </div>
