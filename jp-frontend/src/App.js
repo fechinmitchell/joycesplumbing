@@ -1,3 +1,4 @@
+// jp-frontend/src/App.js
 import React, { useState, useEffect } from 'react';
 import { 
   Phone, Mail, MapPin, Droplets, Wrench, ShowerHead, 
@@ -74,7 +75,7 @@ const Hero = () => (
         From urgent emergency plumbing services to outdoor tap installations, leak detection, and pipe repairs, we deliver fast, reliable solutions that keep your plumbing in perfect working order. Serving Connemara, Galway City and surrounding areas, we bring quality craftsmanship and prompt service to every job — big or small.
       </p>
       <div className="hero-buttons">
-        <a href="tel:+353851234567" className="btn-primary">
+        <a href="tel:+353870989898" className="btn-primary">
           <Phone size={20} /> Give Us a Call
         </a>
         <button className="btn-secondary" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -239,13 +240,13 @@ const Contact = () => {
               Give us a call or drop us a message — no obligation, just friendly advice.
             </p>
             <div className="contact-details">
-              <a href="tel:+353851234567" className="contact-item">
+              <a href="tel:+353870989898" className="contact-item">
                 <div className="contact-icon"><Phone size={24} /></div>
-                <div><strong>Phone</strong><span>085 123 4567</span></div>
+                <div><strong>Phone</strong><span>087 098 9898</span></div>
               </a>
-              <a href="mailto:info@joycesplumbing.ie" className="contact-item">
+              <a href="mailto:joycesplumbing@gmail.com" className="contact-item">
                 <div className="contact-icon"><Mail size={24} /></div>
-                <div><strong>Email</strong><span>info@joycesplumbing.ie</span></div>
+                <div><strong>Email</strong><span>joycesplumbing@gmail.com</span></div>
               </a>
               <div className="contact-item">
                 <div className="contact-icon"><MapPin size={24} /></div>
@@ -300,7 +301,7 @@ const Contact = () => {
                       id="phone" 
                       value={formData.phone} 
                       onChange={(e) => setFormData({...formData, phone: e.target.value})} 
-                      placeholder="085 123 4567"
+                      placeholder="087 123 4567"
                       autoComplete="tel"
                     />
                   </div>
