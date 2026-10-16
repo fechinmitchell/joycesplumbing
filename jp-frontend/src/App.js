@@ -80,20 +80,6 @@ const Hero = () => (
           View Services <ArrowRight size={20} />
         </button>
       </div>
-      <div className="hero-trust">
-        <div className="trust-item">
-          <CheckCircle size={20} />
-          <span>Free Quotes</span>
-        </div>
-        <div className="trust-item">
-          <CheckCircle size={20} />
-          <span>No Call-Out Fee</span>
-        </div>
-        <div className="trust-item">
-          <CheckCircle size={20} />
-          <span>Same Day Service</span>
-        </div>
-      </div>
     </div>
     <div className="scroll-indicator" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
       <ChevronDown className="scroll-icon" />
